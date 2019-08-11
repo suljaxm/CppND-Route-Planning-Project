@@ -54,11 +54,29 @@ int main(int argc, const char **argv)
     // user input for these values using std::cin. Pass the user input to the
     // RoutePlanner object below.
 
+    // get user input
+
+    float start_x, start_y, end_x, end_y;
+    std::cout << "the map coordinates begin at (0,0) in the lower left corner, and end at (100, 100) in the upper right." << "\n";
+    std::cout << "enter a start x between 0 and 100: ";
+    std::cin >> start_x;
+    std::cout << "enter a stert y between 0 and 100: ";
+    std::cin >> start_y;
+    std::cout << "enter an end x between 0 and 100: ";
+    std::cin >> end_x;
+    std::cout << "enter an end y between 0 and 100: ";
+    std::cin >> end_y;
     // Build Model.
     RouteModel model{osm_data};
 
+    // for testing
+    // RoutePlanner route_planner{model, 0, 0, 90, 90};
+
     // Perform search and render results.
-    RoutePlanner route_planner{model, 10, 10, 90, 90};
+    RoutePlanner route_planner{model, start_x, start_y, end_x, end_y};
+    route_planner.AStarSearch();
+    std::cout << "Distance: " << route_planner.GetDistance() << " meters. \n";
+
     Render render{model};
 
     auto display = io2d::output_surface{400, 400, io2d::format::argb32, io2d::scaling::none, io2d::refresh_style::fixed, 30};
