@@ -1,6 +1,7 @@
 # Route Planning Project Starter Code
 
 This is the starter code for the Route Planning project. Instructions for each exercise can be found in the `instructions` directory, and unit tests for some exercises in the `test` directory.
+![](./pic/result.png)
 
 ## Cloning
 
@@ -21,8 +22,6 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
   * Linux: make is installed by default on most Linux distros
 * gcc/g++ >= 7.4.0
   * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
 * [IO2D](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md)
     ```
     sudo apt update
